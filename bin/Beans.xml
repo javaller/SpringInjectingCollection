@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id = "javaCollections" class = "com.tutorialspoint.JavaCollections">
+		<property name="countryList">
+			<list>								
+				<value>India</value>
+				<value>USA</value>				
+				<value>UAO</value>
+				<value>Pakistan</value>
+				<ref bean = "adress1"/>
+			</list>
+		</property>
+				
+		<property name="countrySet">
+			<set>		
+				<value>India</value>
+				<value>USA</value>
+				<value>UAO</value>
+				<value>Pakistan</value>
+				<ref bean = "adress1"/>			
+			</set>
+		</property>
+				 		
+		<property name="countryMap">
+			<map>				
+				<entry key = "1" value = "India"></entry>
+				<entry key = "2" value = "USA"></entry>
+				<entry key = "3" value = "UAO"></entry>
+				<entry key = "4" value = "Pakistan"></entry>
+				<entry key = "5" value-ref="adress1"></entry>
+			</map>
+		</property>
+		
+		<property name="countryProperties">
+			<props>
+				<prop key="one">India</prop>
+				<prop key="two">USA</prop>
+				<prop key="three">UAO</prop>
+				<prop key="four">Russia</prop>		
+					
+			</props>
+		</property>				 
+	</bean>
+</beans>
